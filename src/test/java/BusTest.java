@@ -17,6 +17,21 @@ public class BusTest {
         assertEquals("Picadilly Circus", bus.getDestination());
     }
 
+    @Test
+    public void checkBusHasCapacity(){
+        assertEquals(20, bus.getCapacity());
+    }
+
+    @Test
+    public void checkBusIsEmptyOfPassengers(){
+        assertEquals(0, bus.passengerCount());
+    }
+
+    @Test
+    public void checkCanAddPassenger(){
+        bus.addPassenger(passenger);
+        assertEquals(1, bus.passengerCount());
+    }
 
 
 }
